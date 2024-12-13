@@ -8,11 +8,11 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the application code (including bestbuy-staff-service.py)
+# Copy the application code (including app.py)
 COPY . .
 
 # Expose the port the app runs on
 EXPOSE 5000
 
 # Run the application
-CMD ["python", "bestbuy-staff-service.py"]
+CMD ["python", "app.py"]
